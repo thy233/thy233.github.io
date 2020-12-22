@@ -15,10 +15,13 @@ body {
 
 .container {
 	position: relative;
+	padding: 0 2rem;
 	width: 1280px;
+	margin: auto;
 }
 
 #app {
+	position: relative;
 	height: 100%;
 	font-family: "Trebuchet MS";
 	background-color: #EEEEEE;
@@ -36,7 +39,7 @@ body {
 	color: #F5F5F5;
 	overflow: hidden;
 	transition: 0.5s;
-	z-index: 1;
+	z-index: 2;
 }
 
 #app > .nav.open {
@@ -76,6 +79,7 @@ body {
 	line-height: 2rem;
 	text-decoration: none;
 	font-weight: bolder;
+	letter-spacing: 1rem;
 	color: #616161;
 }
 
@@ -91,10 +95,10 @@ body {
 #app > .header {
 	line-height: 3.5rem;
 	font-size: 1.5rem;
-	padding: 0 2rem;
 	font-weight: bolder;
 	box-shadow: 0 0 1rem #BDBDBD;
 	background-color: #FAFAFA;
+	z-index: 1;
 }
 
 #app > .header > .container {
@@ -109,13 +113,27 @@ body {
 }
 
 #app > .header .menu > .item {
+	display: block;
 	width: 3rem;
 	height: 3rem;
 	text-align: center;
 }
 
-#app > .header .menu > .item:hover {
+#app > .header .menu > .item a {
+	color: #424242;
+}
+
+#app > .header .menu > .item:hover,
+#app > .header .menu > .item a:hover {
 	color: #2979FF;
+}
+
+#app > .main {
+	position: absolute;
+	width: 100%;
+	top: 3.5rem;
+	bottom: 0;
+	overflow: auto;
 }
 
 @media screen and (max-width: 1280px) {

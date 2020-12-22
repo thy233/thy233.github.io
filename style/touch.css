@@ -1,0 +1,110 @@
+#app > .main {
+	background-color: #82B1FF;
+}
+
+#app > .main img,
+#app > .main input,
+#app > .main textarea {
+	width: 100%;
+	outline: none;
+	border: none;
+}
+
+#app > .main > .container {
+	display: flex;
+	place-items: center;
+	height: 100%;
+}
+
+#app > .main .img {
+	flex: 3;
+	margin-right: 2rem;
+	padding: 2rem;
+}
+
+#app > .main .touch {
+	flex: 2;
+	padding: 2rem;
+}
+
+#app > .main .touch label,
+#app > .main .touch .button-box {
+	display: block;
+	margin-top: 1.5rem;
+}
+
+#app > .main .touch .title {
+	margin: 0;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+#app > .main .touch .title .text {
+	padding: 0 1rem;
+	border-radius: 1rem;
+	color: #2979FF;
+	background-color: #F5F5F5;
+}
+
+#app > .main .touch input,
+#app > .main .touch textarea {
+	line-height: 1.5rem;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border-radius: 1rem;
+	color: #424242;
+}
+
+#app > .main .touch textarea {
+	height: 15rem;
+}
+
+
+#app > .main .touch button,
+#app > .main .touch .button {
+	height: 100%;
+	font-weight: bolder;
+	background-color: #2979FF;
+	color: #F5F5F5;
+	text-decoration: none;
+	line-height: 2rem;
+	font-size: 1rem;
+	padding: 0 1.5rem;
+	border: none;
+	border-radius: 1rem;
+	outline: none;
+}
+
+#app > .main .touch .button-box {
+	display: flex;
+	justify-content: space-around;
+}
+
+@media screen and (max-width: 1024px) {
+	#app > .main .container {
+		justify-content: center;
+		background-image: url(../img/undraw_Mailbox_re_dvds.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	#app > .main .img {
+		display: none;
+	}
+
+	#app > .main .touch {
+		width: 70%;
+		flex: none;
+		border-radius: 1rem;
+		z-index: 1;
+		background: rgba(255,255,255,0.4);
+		backdrop-filter: blur(2rem);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#app > .main .touch {
+		flex: 2;
+	}
+}
